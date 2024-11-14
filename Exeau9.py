@@ -13,5 +13,6 @@ if st.checkbox('Mostrar Tabela'):
 st.map(dadosFiltrados,latitude="Lat_d",longitude="Long_d")
 qtMunicipios=len(df['NM_MUNIC'].unique())
 st.write('A quantidade de municípios com localização quilombola é' + str(qtMunicipios))
+
 qtComunidades=len(df['NM_AGLOM'].unique())
-st.write('A quantidade de comunidades quilombolas é' + str(qtComunidades))
+st.write('A quantidade de comunidades quilombolas é ' + str(qtComunidades))
