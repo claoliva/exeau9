@@ -8,4 +8,6 @@ df[list]=df[list].apply(pd.to_numeric, errors='coerce')
 estados=df['NM_UF'].unique()
 estadoFiltro=st.selectbox('Qual estado selecionar?', estados)
 dadosFiltrados=df[df['NM_UF']==estadoFiltro]
-st.write(dadosFiltrados)
+if st.checkbox('Mostrar Tabela'):
+  st.write(dadosFiltrados)
+st.map(dadosFiltrados,latitude="Lat_d",longitude="Long_d")
