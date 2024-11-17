@@ -24,3 +24,5 @@ numero=st.slider('Selecione um número de linhas a serem exibidas', min_value=0,
 st.write(df.head(numero))
 st.header('Os cinco estados com mais comunidades quilombolas')
 st.bar_chart(df['NM_UF'].value_counts()[:5])
+st.metric('NM_MUNIC', len(df['NM_MUNIC'].unique()))
+st.metric('NM_AGLOM', len(df['NM_AGLOM'].unique()))
